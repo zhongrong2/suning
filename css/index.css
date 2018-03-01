@@ -341,9 +341,10 @@
 }
 
 .banner{
-	width: 100%;
+	width: 1300px;
 	height: 440px;
 	position: relative;
+	margin: 0 auto;
 	/* background-color: red; */
 }
 .banner_image{
