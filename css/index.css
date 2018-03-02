@@ -342,10 +342,11 @@
 }
 
 .banner{
-	width: 1300px;
+	width: 1366px;
 	height: 440px;
 	position: relative;
 	margin: 0 auto;
+	overflow-x: hidden;
 	/* background-color: red; */
 }
 .banner_image{
@@ -368,6 +369,7 @@
 	float: right;
 	position: absolute;
 	right: -303px;
+	overflow-x: hidden;
 }
 .banner_top{
 	width: 1190px;
