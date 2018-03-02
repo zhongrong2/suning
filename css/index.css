@@ -32,9 +32,10 @@
 	position: absolute;
 }
 .head{
-	width: 100%;
+	width: 1300px;
 	height: 36px;
 	background-color: #F5F5F5;
+	margin: 0 auto;
 }
 .head_left{
 	width: 326px;
@@ -2856,4 +2857,10 @@
 .jinrong_title_sao{
 	position: absolute;
 	left: 60px;
+}
+
+.shoppingall{
+	width: 1300px;
+	margin: 0 auto;
+	position: relative;
 }
