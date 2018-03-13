@@ -8,7 +8,10 @@
 } 
 
 
-
+body{
+	width: 1366px;
+	overflow-x: hidden;
+}
 .all{
 	background-color: #efefef;
 	z-index: 0;
@@ -350,10 +353,11 @@
 	/* background-color: red; */
 }
 .banner_image{
-	width: 100%;
+	width: 1366px;
 	height: 440px;
 	position: relative;
 	z-index: 0;
+	overflow: hidden;
 }
 .banner_left{
 	width: 554px;
@@ -362,14 +366,25 @@
 	position: absolute;
 	left: -276px;
 }
+.banner_left img{
+	width: 554px;
+	height: 440px;
+	float: left;
+}
 .banner_right{
 	width: 554px;
 	height: 440px;
 	margin-right: 0px;
-	float: right;
+	float: left;
 	position: absolute;
-	right: -303px;
+	right: -270px;
 	overflow-x: hidden;
+}
+.banner_right img{
+	width: 554px;
+	height: 440px;
+	margin-right: 0px;
+	float: left;
 }
 .banner_top{
 	width: 1190px;
@@ -377,7 +392,7 @@
 	/* background-color: blue; */
 	position: absolute;
 	top: 0px;
-	left: 80px;
+	left: 88px;
 	float: left;
 	/* z-index: 3; */
 }
@@ -395,7 +410,9 @@
 	background-color: #F7C4C4;
 	position: absolute;
 	top: 5px;
-	right: 175px;
+	right: 180px;
+	z-index: 15;
+	/* opacity: 0; */
 }
 .banner_top_img1 h1{
 	font-size: 12px;
@@ -427,7 +444,9 @@
 	background-color: #F7C4C4;
 	position: absolute;
 	bottom: 5px;
-	right: 175px;
+	right: 180px;
+	z-index: 15;
+	/* opacity: 0; */
 }
 .banner_top_img2 h1{
 	font-size: 12px;
@@ -458,7 +477,8 @@
 	height: 440px;
 	position: absolute;
 	top: 0px;
-	left: 0;
+	left: 0px;
+	right: 0px;
 	background-color: #252221;
 	
 }
@@ -496,6 +516,8 @@
 	/* background-color: blue; */
 	float: right;
 	position: relative;
+	z-index: 99;
+	top: 0;
 }
 .banner_more_top{
 	width: 170px;
@@ -2766,6 +2788,9 @@
 	background-color: #383838;
 	position: fixed;
 	right: 0px;
+	/* left: 1366px; */
+	top: 0px;
+	bottom: 0px;
 	z-index: 2;
 }
 .shopping_middle{
@@ -2865,4 +2890,283 @@
 	width: 1300px;
 	margin: 0 auto;
 	position: relative;
+}
+
+
+#banner{
+	width: 1366px;
+	height: 440px;
+	margin: 0 auto;
+	position: relative;
+	/* cursor: pointer;	 */
+	transition: all 1s;
+}
+.imgbox{
+	width: 830px;
+	height: 440px;
+	position: relative;
+	margin: 0 auto;
+	z-index: 4;
+	/* cursor: pointer; */
+}
+.imgbox li{
+	width: 830px;
+	height: 440px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	bottom: 0;
+	right: 0;
+	transition: all 0.5s ease-in;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 5;
+}
+.imgbox img{
+	float: left;
+}
+.imgbox li.action{
+	z-index: 9;
+	opacity: 1;
+}
+.pagerbox{
+	width: 232px;
+	height: 20px;
+	position: absolute;
+	bottom: 20px;
+	left: 520px;
+	/* background-color: red; */
+	z-index: 4;
+	/* cursor: pointer; */
+}
+.pagerbox li{
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	margin-left: 8px;
+	float: left;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.pagerbox li.action{
+	background-color: #E8AF2B;
+}
+.pagerbox li:hover{
+	/* cursor: pointer; */
+	background-color: #E8AF2B;
+}
+.prev,.next{
+	width: 30px;
+	height: 64px;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	z-index: 20;
+	background: url("../image/banner/index.png");
+	cursor: pointer;
+	opacity: 0;
+}
+.prev{
+	left: 280px;
+	background-position: -82px -145px;
+}
+.prev:hover{
+	background-position: -161px -145px;
+}
+.next{
+	right: 260px;
+	background-position: -120px -145px;
+}
+.next:hover{
+	background-position: -198px -145px;
+}
+.banner3:hover .prev{
+	opacity: 1;
+}
+.banner3:hover .next{
+	opacity: 1;
+}
+
+
+.tobar{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	background-color: #fff;
+	cursor: pointer;
+	z-index: 9998;
+}
+.bar_search{
+	float: left;
+	margin: 0;
+	margin-left: 190px;
+}
+.bar_right{
+	margin-right: 26px;
+	width: 280px;
+}
+.bar_left{
+	margin-left: 70px;
+}
+
+.leftbar{
+	width: 70px;
+	height: 319px;
+	background-color: #f8f8f8;
+	position: fixed;
+	padding-top: 9px;
+	display: none;
+	bottom: 150px;
+	z-index: 9999;
+}
+.leftbar_img{
+	position: absolute;
+	top: -30px;
+	left: 10px;
+	width: 45px;
+	height: 45px
+}
+.leftbar_img img{
+	width: 45px;
+	height: 45px;
+	float: left;
+}
+.barlist{
+	width: 100%;
+	height: 290px;
+	float: left;
+}
+.tip{
+	width: 68px;
+	height: 28px;
+	border-bottom: 1px solid #e8e8e8;
+	font-size: 10px;
+	color: #333;
+	text-align: center; 
+	line-height: 28px;
+	cursor: pointer;
+}
+.tip:hover{
+	background-color: #FF9900;
+}
+.containor{
+	transition: all 0.5s;
+}
+
+
+
+.banner_image{
+	float: left;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+}
+
+
+.banner_topl_item:hover{
+	background-color: #fff;
+}
+.banner_topl_item:hover .tem_weizi{
+	color: #333;
+}
+.tem_weizi:hover{
+	color: #f90!important;
+}
+
+
+.banner3{
+	z-index: 99;
+}
+.banner_topl{
+	position: relative;
+}
+.banner_itemtan{
+	width: 1000px;
+	height: 436px;
+	float: left;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 190px;
+	bottom: 0px;
+	right: 0px;
+	border-top: 2px solid #333;
+	border-right: 2px solid #333;
+	border-bottom: 2px solid #333;
+	z-index: 999;
+	display: none;
+}
+.active{
+	display: block;
+}
+.banner_itemtan_btn{
+	width: 686px;
+	height: 24px;
+	float: left;
+	margin: 10px 0 0 8px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.banner_itemtan_btn h1{
+	float: left;
+	height: 24px;
+	margin-left: 25px;
+	padding: 0 25px;
+	color: #fff;
+	line-height: 24px;
+	background-color: #f90;
+	float: left;
+}
+.banner_itemtan_btn h1:hover{
+	color: #fff;
+}
+.banner_itemtan_list{
+	width: 780px;
+	height: 335px;
+	margin-top: 10px;
+	padding-left: 20px;
+	float: left;
+	cursor: pointer;
+}
+.banner_itemtan_list dl{
+	width: 750px;
+	height: auto;
+	float: left;
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+.banner_itemtan_list dt{
+	float: left;
+	width: 84px;
+	height: 20px;
+	padding-left: 10px;
+	padding-top: 4px;
+	line-height: 20px;
+	font-weight: 700;
+	font-size: 12px;
+}
+.banner_itemtan_list dd{
+	width: 650px;
+	float: left;
+	margin-top: 4px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eee;
+	font-size: 12px;
+	color: #333;
+}
+.banner_itemtan_list a{
+	margin-right: 15px;
+	line-height: 20px;
+}
+.banner_itemtan_list dt:hover{
+	color: #f90;
+}
+.banner_itemtan_list a:hover{
+	color: #f90;
 }
