@@ -170,3 +170,179 @@
 		}
 	})
 }
+//banner头部导航
+{
+	let title=document.querySelectorAll(".daohang_wenzi a");
+	let menus=document.querySelectorAll(".daohang_wenzi span");
+	let topdaohang=document.querySelectorAll(".daohang_wenzi");
+	// console.log(title,menus);
+
+	let obj=menus[0]
+	title.forEach(function(ele,index){
+		ele.onmouseenter=function(){
+
+			obj.classList.remove("top_active");
+			menus[index].classList.add("top_active");
+			obj=menus[index];
+		}
+		ele.onmouseleave=function(){
+			obj.classList.remove("top_active");
+		}
+	})
+}
+//大聚惠
+{
+	const prev=document.querySelector(".dajuhui_image_lbtn");
+	const next=document.querySelector(".dajuhui_image_rbtn");
+	const inner=document.querySelector(".dajuhui_imgs");
+	let item=document.querySelectorAll(".dajuhui_limg_item");
+
+	let n=1;
+	let flag=true;
+
+		next.onclick=function(){
+			if(flag){
+				flag=false;
+				n++;
+				inner.style.transition="all 1s"
+				inner.style.marginLeft=-1000*n+"px";
+			}
+		}
+
+		prev.onclick=function(){
+			if(flag){
+				flag=false;
+				n--;
+				inner.style.transition="all 1s"
+				inner.style.marginLeft=-1000*n+"px";
+			}
+
+		}
+
+		inner.addEventListener("transitionend", function(){
+			flag=true;
+			if(n===4){
+				inner.style.transition="none";
+				inner.style.marginLeft="-1000px";
+				n=1;
+			}
+
+			if(n===0){
+				inner.style.transition="none";
+				inner.style.marginLeft="-3000px";
+				n=3;
+			}
+		})
+
+
+		
+
+}
+//头部
+{
+	let lables=document.querySelectorAll(".head_left_wenzi");
+	let menus=document.querySelectorAll(".head_tan");
+	let head=document.querySelectorAll(".head_left");
+	// console.log(lables,menus);
+
+	let obj=menus[0]
+	lables.forEach(function(ele,index){
+		ele.onmouseenter=function(){
+
+			obj.classList.remove("head_active");
+			menus[index].classList.add("head_active");
+			obj=menus[index];
+		}
+		ele.onmouseleave=function(){
+			obj.classList.remove("head_active");
+		}
+	})
+}
+//旁边shopping
+{
+{
+	let lables=document.querySelectorAll(".sideshopping");
+	let menus=document.querySelectorAll(".shopping_tan");
+	let sidebar=document.querySelectorAll(".shopping li");
+	// console.log(lables,menus);
+
+	let obj=menus[0]
+	lables.forEach(function(ele,index){
+		ele.onmouseenter=function(){
+
+			obj.classList.remove("shopping_active");
+			menus[index].classList.add("shopping_active");
+			obj=menus[index];
+		}
+		ele.onmouseleave=function(){
+			obj.classList.remove("shopping_active");
+		}
+	})
+}
+
+
+{
+	let lables=document.querySelectorAll(".sideshopping2");
+	let menus=document.querySelectorAll(".shopping_tan2");
+	// let sidebar=document.querySelectorAll(".shopping li");
+	// console.log(lables,menus);
+
+	let obj=menus[0]
+	lables.forEach(function(ele,index){
+		ele.onmouseenter=function(){
+
+			obj.classList.remove("shopping_active2");
+			menus[index].classList.add("shopping_active2");
+			obj=menus[index];
+		}
+		ele.onmouseleave=function(){
+			obj.classList.remove("shopping_active2");
+		}
+	})
+}
+
+{
+	let lables=document.querySelectorAll(".sideshopping3");
+	let menus=document.querySelectorAll(".shopping_tan3");
+	// let sidebar=document.querySelectorAll(".shopping li");
+	// console.log(lables,menus);
+
+	let obj=menus[0]
+	lables.forEach(function(ele,index){
+		ele.onmouseenter=function(){
+
+			obj.classList.remove("shopping_active3");
+			menus[index].classList.add("shopping_active3");
+			obj=menus[index];
+		}
+		ele.onmouseleave=function(){
+			obj.classList.remove("shopping_active3");
+		}
+	})
+}
+//点击回到顶部
+{
+	let totop1=document.querySelector(".shopping_totop");
+	console.log(totop1);
+	// let contains=document.querySelectorAll(".containor");
+
+		totop1.onclick=function(){
+		document.documentElement.scrollTop=0;
+		let st=document.documentElement.scrollTop;
+		let t=setInterval(function(){
+			st-=200;
+			if(st<0){
+				st=0;
+				clearInterval(t);
+
+			}
+			document.documentElement.scrollTop=st;
+		},25)
+		
+		
+	}
+}
+}
+
+
+
