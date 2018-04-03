@@ -114,7 +114,6 @@
 						document.documentElement.scrollTop=now;
 					}
 
-					contains.style.transition="all 1s linear";
 				},25);
                 // contains.style.transition="all 0.5s linear";
 			}
