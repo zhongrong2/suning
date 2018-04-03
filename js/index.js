@@ -113,24 +113,30 @@
 						// clearInterval(ot)
 						document.documentElement.scrollTop=now;
 					}
-					
 
-				},25)
+					contains.style.transition="all 1s linear";
+				},25);
+                // contains.style.transition="all 0.5s linear";
 			}
+
+            window.addEventListener("scroll", function(){
+
+                let st=document.documentElement.scrollTop;
+
+                for(let i=0;i<contains.length;i++){
+
+                    if(st>contains[i].offsetTop-120){
+
+                        for(let i=0;i<tips.length;i++){
+                            tips[i].classList.remove("active3");
+                        }
+                        tips[i].classList.add("active3");
+                    }
+                }
+            });
 
 		});
 
-		window.addEventListener("scroll", function(){
-			let st=document.documentElement.scrollTop;
-			for(let i=0;i<contains.length;i++){
-				if(st>contains[i].offsetTop-50){
-					for(let i=0;i<tips.length;i++){
-						tips[i].classList.remove("active");
-					}
-					tips[i].classList.add("active");
-				}
-			}
-		});
 
 		totop.onclick=function(){
 		document.documentElement.scrollTop=0;
@@ -143,9 +149,9 @@
 
 			}
 			document.documentElement.scrollTop=st;
-		},25)
+		},25);
 		// console.log(t);
-		
+
 		
 	}
 	}
