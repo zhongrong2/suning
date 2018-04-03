@@ -12,9 +12,10 @@ body{
 	width: 1366px;
 	overflow-x: hidden;
 	margin:0 auto;
+	background-color: #efefef;
 }
 .all{
-	background-color: #efefef;
+
 	z-index: 0;
 }
 .top{
